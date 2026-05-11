@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://blog.imichka.me/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'iMichka - Blog'
 
 [module]
 [[module.imports]]
