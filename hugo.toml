@@ -8,3 +8,28 @@ disable = false
 ignoreConfig = false
 ignoreImports = false
 path = 'github.com/gohugo-ananke/ananke/v2'
+
+[params.ananke.social.follow]
+networks = [
+  "github",
+  "mastodon",
+  "linkedin"
+]
+
+[params.ananke.social.networks.github]
+icon = 'github'
+label = 'GitHub'
+profile = 'https://github.com/iMichka/'
+slug = 'github'
+
+[params.ananke.social.networks.linkedin]
+icon = 'linkedin'
+label = 'LinkedIn'
+profile = 'https://www.linkedin.com/in/michkapopoff/'
+slug = 'linkedin'
+
+[params.ananke.social.networks.mastodon]
+icon = 'mastodon'
+label = 'Mastodon'
+profile = 'https://mastodon.imichka.me/@imichka'
+slug = 'mastodon'
