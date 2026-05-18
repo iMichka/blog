@@ -1,7 +1,3 @@
-# ----------------------------
-# S3 bucket
-# ----------------------------
-
 resource "aws_s3_bucket" "site" {
   bucket = "hugo-blog-bucket"
 }
@@ -23,10 +19,6 @@ resource "aws_s3_bucket_versioning" "site" {
   }
 }
 
-# ----------------------------
-# CloudFront Origin Access Control
-# ----------------------------
-
 resource "aws_cloudfront_origin_access_control" "site" {
   name                              = "hugo-site-oac"
   description                       = "CloudFront access to S3"
@@ -34,10 +26,6 @@ resource "aws_cloudfront_origin_access_control" "site" {
   signing_behavior                  = "always"
   signing_protocol                  = "sigv4"
 }
-
-# ----------------------------
-# CloudFront CDN
-# ----------------------------
 
 resource "aws_cloudfront_distribution" "site" {
   enabled             = true
@@ -78,10 +66,6 @@ resource "aws_cloudfront_distribution" "site" {
   }
 }
 
-# ----------------------------
-# Allow CloudFront to access S3
-# ----------------------------
-
 data "aws_iam_policy_document" "site" {
   statement {
     actions = ["s3:GetObject"]
@@ -110,10 +94,6 @@ resource "aws_s3_bucket_policy" "site" {
   bucket = aws_s3_bucket.site.id
   policy = data.aws_iam_policy_document.site.json
 }
-
-# ----------------------------
-# Outputs
-# ----------------------------
 
 output "bucket_name" {
   value = aws_s3_bucket.site.bucket
