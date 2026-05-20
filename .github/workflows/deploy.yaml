@@ -36,12 +36,12 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync public/ s3://${{ secrets.S3_BUCKET }} \
+          aws s3 sync public/ s3://blog-imichka \
             --delete \
             --cache-control "public, max-age=31536000, immutable" \
             --exclude "*.html"
 
-          aws s3 sync public/ s3://${{ secrets.S3_BUCKET }} \
+          aws s3 sync public/ s3://blog-imichka \
             --delete \
             --cache-control "public, max-age=0, must-revalidate" \
             --include "*.html"
