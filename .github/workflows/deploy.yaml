@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   tofu:
+    name: Provision Infrastructure
     runs-on: ubuntu-latest
 
     defaults:
@@ -48,6 +49,7 @@ jobs:
         run: tofu apply -auto-approve tfplan
 
   deploy:
+    name: Build and Deploy Site
     runs-on: ubuntu-latest
     needs: tofu
 
