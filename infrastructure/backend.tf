@@ -7,14 +7,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-
-  backend "s3" {
-    bucket       = "hugo-opentofu-state"
-    key          = "blog/tofu.tfstate"
-    region       = "eu-west-1"
-    use_lockfile = true
-    encrypt      = true
-  }
 }
 
 provider "aws" {
@@ -26,7 +18,7 @@ provider "aws" {
 # ----------------------------
 
 resource "aws_s3_bucket" "tofu_state" {
-  bucket = "my-hugo-opentofu-state"
+  bucket = "blog-opentofu-state"
 }
 
 resource "aws_s3_bucket_versioning" "tofu_state" {
