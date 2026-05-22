@@ -18,7 +18,7 @@ provider "aws" {
 # ----------------------------
 
 resource "aws_s3_bucket" "tofu_state" {
-  bucket = "blog-opentofu-state"
+  bucket = "blog-tofu-state"
 }
 
 resource "aws_s3_bucket_versioning" "tofu_state" {
