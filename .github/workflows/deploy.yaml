@@ -75,12 +75,12 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync public/ s3://blog-imichka \
+          aws s3 sync public/ s3://${{ secrets.BUCKET_NAME }} \
             --delete \
             --cache-control "public, max-age=31536000, immutable" \
             --exclude "*.html"
 
-          aws s3 sync public/ s3://blog-imichka \
+          aws s3 sync public/ s3://${{ secrets.BUCKET_NAME }} \
             --delete \
             --cache-control "public, max-age=0, must-revalidate" \
             --include "*.html"
@@ -88,5 +88,5 @@ jobs:
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E2ZVSXWHC4TC22 \
+            --distribution-id ${{ secrets.CLOUDFRONT_ID }} \
             --paths "/*"
