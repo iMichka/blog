@@ -42,6 +42,8 @@ resource "aws_s3_bucket_policy" "website" {
 }
 
 resource "aws_cloudfront_distribution" "website" {
+  aliases = [var.website_domain]
+
   origin {
     domain_name = aws_s3_bucket.website.bucket_regional_domain_name
     origin_id   = "S3Origin"
@@ -81,7 +83,9 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = aws_acm_certificate_validation.website.certificate_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }
 
