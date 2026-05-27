@@ -41,6 +41,28 @@ resource "aws_s3_bucket_policy" "website" {
   })
 }
 
+resource "aws_cloudfront_function" "rewrite_index" {
+  name    = "blog-rewrite-index"
+  runtime = "cloudfront-js-1.0"
+  comment = "Rewrite pretty URLs to index.html"
+  publish = true
+
+  code = <<-EOT
+function handler(event) {
+  var request = event.request;
+  var uri = request.uri;
+
+  if (uri.endsWith('/')) {
+    request.uri += 'index.html';
+  } else if (!uri.includes('.')) {
+    request.uri += '/index.html';
+  }
+
+  return request;
+}
+EOT
+}
+
 resource "aws_cloudfront_distribution" "website" {
   aliases = [var.website_domain]
 
@@ -61,6 +83,11 @@ resource "aws_cloudfront_distribution" "website" {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3Origin"
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.rewrite_index.arn
+    }
 
     forwarded_values {
       query_string = false
