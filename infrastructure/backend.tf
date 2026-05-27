@@ -28,6 +28,21 @@ provider "aws" {
 }
 
 # ----------------------------
+# Provider for us east 1 region, for acm certificates
+# ----------------------------
+
+provider "aws" {
+  alias      = "cloudfront-acm-us-east-1"
+  region     = "us-east-1"
+
+  default_tags {
+    tags = {
+      ManagedBy = "Managed by OpenTofu"
+    }
+  }
+}
+
+# ----------------------------
 # OpenTofu remote state bucket
 # ----------------------------
 
