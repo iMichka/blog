@@ -32,8 +32,8 @@ provider "aws" {
 # ----------------------------
 
 provider "aws" {
-  alias      = "cloudfront-acm-us-east-1"
-  region     = "us-east-1"
+  alias  = "cloudfront-acm-us-east-1"
+  region = "us-east-1"
 
   default_tags {
     tags = {
