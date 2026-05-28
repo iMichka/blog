@@ -2,6 +2,10 @@ baseURL = 'https://blog.imichka.me/'
 locale = 'en-us'
 title = 'Michka Popoff - Blog'
 
+[params]
+  custom_css = ["my_style.css"]
+
+
 [permalinks]
     posts = "/:year/:slug/"
     page = "/:slug/"

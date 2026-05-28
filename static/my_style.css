@@ -1,0 +1,13 @@
+/* Adjust hero cover image opacity. */
+.bg-black-60 {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+/* Adjust hero cover image anchor point. */
+header.cover {
+    background-position: center 50%;
+}
+
+header.cover.bg-top {
+    min-height: 20vh;
+}

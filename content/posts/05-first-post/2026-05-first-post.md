@@ -2,7 +2,7 @@
 date = '2026-05-27T08:00:00+01:00'
 draft = false
 title = 'My First Post'
-featured_image = 'cover.jpeg'
+featured_image = 'posts/05-first-post/cover.jpeg'
 +++
 
 Hi everyone,
@@ -27,4 +27,3 @@ Why do I want to write a blog? Because I think I have a few interesting things t
 Also, I slightly changed my mind about blogs: this one is going to be static (it is built with Hugo: https://gohugo.io), which simplifies hosting a lot. Reactions can still happen through Mastodon or LinkedIn, since I’m going to share blog posts there.
 
 Anyway, I already have a few posts in preparation. Let’s see where this new adventure takes me.
-
