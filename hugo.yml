@@ -1,0 +1,16 @@
+theme: ["PaperMod"]
+
+params:
+  defaultTheme: dark
+  homeInfoParams:
+    Title: Systems, Teams and Beers
+    Content: Michka Popoff - Blog
+  ShowBreadCrumbs: true
+
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/iMichka/"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/michkapopoff/"
+    - name: "Mastodon"
+      url: "https://mastodon.imichka.me/@imichka"
