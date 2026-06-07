@@ -1,9 +1,16 @@
-+++
-date = '2026-05-27T08:00:00+01:00'
-draft = false
-title = 'My First Post'
-featured_image = 'posts/05-first-post/cover.jpeg'
-+++
+---
+title: 'My First Post'
+date: '2026-05-27T08:00:00+01:00'
+draft: false
+cover:
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: false
+  image: "cover.jpeg"
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: true
+---
 
 Hi everyone,
 

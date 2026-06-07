@@ -1,9 +1,16 @@
-+++
-date = '2026-05-28T08:39:53+02:00'
-draft = true
-title = 'The God Like Team'
-featured_image = 'posts/05-god-like-team/cover.jpeg'
-+++
+---
+title: 'The God Like Team'
+date: '2026-05-28T08:39:53+02:00'
+draft: true
+cover:
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: false
+  image: "cover.jpeg"
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: true
+---
 
 Since a few years I have heard a new mantra in the mouth of multiple managers: let's appoint external consultants to improve the performance of the team or the company. At the beginning, I thought it was a good idea. But the results have been disappointing, especially long term. I want to go through a few scenarios that I have witnessed in the last few years.
 
