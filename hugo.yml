@@ -1,12 +1,17 @@
 baseurl: "https://blog.imichka.me/"
 theme: ["PaperMod"]
+title: "Michka Popoff"
 
 params:
+  env: production
   defaultTheme: dark
   homeInfoParams:
-    Title: Systems, Teams and Beers
+    Title: Teams, Systems and Beers
     Content: Michka Popoff - Blog
+  keywords: [Michka, Popoff, iMichka, blog, teams, systems, beers]
+  DateFormat: "2 January 2006"
   ShowBreadCrumbs: true
+  ShowPostNavLinks: true
 
   socialIcons:
     - name: "GitHub"
@@ -15,3 +20,19 @@ params:
       url: "https://www.linkedin.com/in/michkapopoff/"
     - name: "Mastodon"
       url: "https://mastodon.imichka.me/@imichka"
+
+
+menu:
+  main:
+  - identifier: home
+    name: Home
+    url: /
+    weight: 5
+  - identifier: posts
+    name: Blog
+    url: /posts/
+    weight: 10
+  - identifier: about
+    name: About me
+    url: /about
+    weight: 20

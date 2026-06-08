@@ -7,8 +7,7 @@ cover:
   hiddenInList: false
   hiddenInSingle: false
   image: "cover.jpeg"
-  alt: "<alt text>"
-  caption: "<text>"
+  alt: "Picture of a hop field"
   relative: true
 ---
 
