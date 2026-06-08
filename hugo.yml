@@ -1,3 +1,4 @@
+baseurl: "https://blog.imichka.me/"
 theme: ["PaperMod"]
 
 params:
