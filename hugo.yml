@@ -12,6 +12,10 @@ params:
   DateFormat: "2 January 2006"
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
+  profileMode:
+    enabled: true
+    title: Teams, Software, Systems and Beers
+    subtitle: "This is my personal blog, where I share my thoughts and experiences on different topics that I find interesting."
 
   socialIcons:
     - name: "GitHub"
