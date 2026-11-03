@@ -3,3 +3,4 @@ resources/_gen
 .terraform
 *.tfstate
 *.tfstate.backup
+.claude
